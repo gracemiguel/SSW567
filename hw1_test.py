@@ -13,6 +13,8 @@ class Triangle_test(unittest.TestCase):
         self.assertRaises(TypeError, hw1.classify_triangle("hi", "peeps", "two"))
     def test5(self):
         self.assertRaises(TypeError, hw1.classify_triangle(1,2,3))
+    def test6(self): 
+        self.assertNotEqual(hw1.classify_triangle(5, 5, 7), "This is a scalene triangle")
 
 if __name__ == '__main__':
     unittest.main()
