@@ -9,6 +9,11 @@ class Triangle_test(unittest.TestCase):
         self.assertEqual(hw1.classify_triangle(2,2,2), "The triangle is equilateral")
     def test3(self):
         self.assertEqual(hw1.classify_triangle(1,1,2), "The triangle is isosceles")
+    def test4(self):
+        self.assertRaises(TypeError, hw1.classify_triangle("hi", "peeps", "two"))
+    def test5(self):
+        self.assertRaises(TypeError, hw1.classify_triangle(1,2,3))
+
 if __name__ == '__main__':
     unittest.main()
  
